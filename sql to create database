@@ -1,0 +1,20 @@
+CREATE DATABASE cash_register;
+
+USE cash_register;
+
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    paid_amount DECIMAL(10, 2) NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    change_amount DECIMAL(10, 2) NOT NULL,
+    transaction_date DATETIME NOT NULL
+);
+
+CREATE TABLE articles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    transaction_id INT NOT NULL,
+    barcode VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (transaction_id) REFERENCES transactions(id)
+);

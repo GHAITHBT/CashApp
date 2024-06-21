@@ -1,38 +1,133 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-attachment: fixed; /* Ensures the background image doesn't scroll */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  width: 90%; /* Adjust the width as desired */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-secondary {
+  background-color: #6c757d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.article-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article-item {
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.totals {
+  margin-top: 20px;
+}
+
+.transactions-list {
+  margin-top: 20px;
+}
+
+.transaction-item {
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+}
+/* Add these styles to your existing CSS */
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da; /* Red background */
+  border: 1px solid #f5c6cb; /* Red border */
+  border-radius: 4px;
+  color: #721c24; /* Dark red text */
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda; /* Green background */
+  border: 1px solid #c3e6cb; /* Green border */
+  border-radius: 4px;
+  color: #155724; /* Dark green text */
 }
